@@ -1,12 +1,5 @@
 //'use strict';
-(function() {
-    var title = "ax";
-    book = {get: function() {
-        return title;
-    }}
-})
-console.log(book.title)
-/*eval("var uno = 1")
+eval("var uno = 1")
 eval("var dos = 2")
 eval("function suma(a, b) {return a + b;}");
 console.log(suma(uno, dos));
@@ -24,5 +17,5 @@ class test {
         }).listen(8080);
     }
 }
-test.main();*/
+test.main();
          
