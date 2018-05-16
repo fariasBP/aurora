@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+        var text = `
+            var uno = 1;
+            var dos = 2;
+            var verdadero = true;
+            var falso = false;
+            var string = "holsdf";
+            var a = ['franco', 'felix', 'eddy'];
+            var b = [['franco','carvajal',19],['felix','arias',18]];
+            var c= ['uno', ['dos-uno', 'dos-dos'], tres];
+            include();
+            hola();
+            if (a == 1) {console.log(a)};
+            function al() {return a/b};`;
+            var x = text.match(/[ \w\=\"\+\-\*/\\'\(\)\[\,\]\{\}\.]+(?=;)/g);
+            console.log(x.length);
+            console.log(x)
+            for (let key in x) {
+                document.write(x[key]+ '</br>');
+            }
+            
+    </script>
+</body>
+</html>

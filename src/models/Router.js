@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 let Server = require('./Server').Server;
 class Router extends Server {
     constructor() {
@@ -14,21 +14,23 @@ class Router extends Server {
                 if (err) throw err;
                 let code = data.match(/[^\{\}]+(?=\})/g);
                 var lineCode = [];
-                var x = 10,y = 20;
+                eval("var uno = 10");
+                console.log(uno)
                 var dataR;
+                var a;
+                
                 for (let key in code) {
                     lineCode[key] = (code[key].match(/[ \w\+\=]+(?=\;)/g));
                     for (let i in lineCode[key]) {
-                        
                         lineCode[key][i] = lineCode[key][i].replace(/^\s+|\s+$/g, "");
-                        let a = eval(lineCode[key][i]);
-                        //console.log(lineCode[key][i]); console.log(a)
-                        data = data.replace(lineCode[key][i], a);
-                        //console.log(dataR)
-                        
+                        console.log(lineCode[key][i])
+                        eval(lineCode[key][i])
+                        a = eval(lineCode[key][i]);
+                        data.replace(/[\{\}]+/g, '')
+                        data = data.replace(lineCode[key][i]+';', a);
                     } 
                 }
-                //console.log(dataR)
+                data = data.replace(/(}})+|({{)+/g, "");
                 console.log('LINECODE:\n', lineCode)
                 res.end(data);
             });        

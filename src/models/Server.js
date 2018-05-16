@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 let Utils = require('./Utils').Utils;
 class Server extends Utils {
     constructor() {

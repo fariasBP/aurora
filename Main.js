@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 let Router = require('./src/models/Router').Router;
 class Main {
     static main() {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    function m() {
+        console.log('in sume')
+        eval("var uno = 1")
+    eval("var dos = 2")
+    eval("function suma(a, b) {return a + b;}");
+    console.log(suma(uno, dos));
+    }
+    m()
+    
+    class algo {
+        static main() {
+            eval("var uno = 1")
+            eval("var dos = 2")
+            eval("function suma(a, b) {return a + b;}");
+            console.log(suma(uno, dos));
+        }
+    }
+    algo.main();
+</script>
+<body>
+</body>
+</html>
