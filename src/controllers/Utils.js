@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 class Utils {
     constructor() {
         this.fs = require('fs');
@@ -6,8 +6,11 @@ class Utils {
     readFileUtf8(path, callback) {
         this.fs.readFile(path, 'utf-8', callback);
     }
-    readFielSyncUtf8(path) {
+    readFileSyncUtf8(path) {
         return this.fs.readFileSync(path, 'utf8');
+    }
+    include(path) {
+        return 'hola';
     }
 }
 exports.Utils = Utils;

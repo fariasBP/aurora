@@ -10,10 +10,9 @@
     {{hola; 1+1;}}
     <p>contenido} de algo ipsumsteafks asfjsklgjaljalgj askljigj</p>
     {{
-        var x = 2;
-        var y = 3;
+        'hola';
         
     }}
-    {{otra; include('titulo')}}
+    {{otra; include('titulo');}}
 </body>
 </html>
