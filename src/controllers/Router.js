@@ -8,9 +8,7 @@ class Router extends Server {
         var routingStar = (req, res) => {
             var hola = '<h1>Hola Mundo</h1>';
             var otra = '<h2>Otra vez</h2>';
-            function algo () {
-                
-            }
+            var algo = 'algo';
             res.writeHead(200, {'Content-Type':'text/html'});
             this.readFileUtf8('./src/views/home.jsh', (err, data) => {
                 if (err) throw err;
@@ -30,7 +28,7 @@ class Router extends Server {
                         var a = eval(lineCode[key][i]);
                         data.replace(/[\{\}]+/g, '')
                         data = data.replace(lineCode[key][i]+';', a);
-                    } 
+                    }
                 }
                 data = data.replace(/(}})+|({{)+/g, "");
                 //console.log('LINECODE:\n', lineCode)
