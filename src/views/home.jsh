@@ -10,8 +10,7 @@
     {{hola; 1+1;}}
     <p>contenido} de algo ipsumsteafks asfjsklgjaljalgj askljigj</p>
     {{
-        'hola';
-        
+        'hola';      
     }}
     {{otra; include('titulo');}}
     {{

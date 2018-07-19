@@ -32,6 +32,7 @@ class Router extends Server {
                 }
                 data = data.replace(/(}})+|({{)+/g, "");
                 //console.log('LINECODE:\n', lineCode)
+                console.log(res.render);
                 res.end(data);
             });        
         }
